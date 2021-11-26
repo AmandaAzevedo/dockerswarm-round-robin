@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
    app:
-      image: amandaazevedo/testesd
+      image: amandaazevedo/round-robin
       ports:
          - "8080:8080"
       deploy:
