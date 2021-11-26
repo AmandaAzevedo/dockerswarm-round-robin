@@ -28,7 +28,7 @@ resource "aws_security_group" "ssh-access" {
 
 # Definindo nó manager do cluster
 resource "aws_instance" "manager" {
-    count = 2
+    count = 3
     ami = "ami-026c8acd92718196b"
     instance_type = "t2.micro"
     key_name = var.key_name
@@ -40,7 +40,7 @@ resource "aws_instance" "manager" {
 
 # Definindo nós workers do cluster
 resource "aws_instance" "worker" {
-    count = 0
+    count = 2
     ami = "ami-026c8acd92718196b"
     instance_type = "t2.micro"
     key_name = var.key_name
